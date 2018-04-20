@@ -6,17 +6,22 @@ var argscheck = require('cordova/argscheck'),
 
 var MediaSyncManager = function () {};
 
-MediaSyncManager.enable = function (email) {
+MediaSyncManager.enable = function (email, db) {
     return new Promise(function(resolved, rejected) {
-        exec(resolved, rejected, "NXdriveMediaSync", "enableSync", [email]);
+        exec(resolved, rejected, "NXdriveMediaSync", "enableSync", [email, db]);
     });
 };
 
-MediaSyncManager.disable = function (email) {
+MediaSyncManager.disable = function (email, db) {
     return new Promise(function(resolved, rejected) {
-        exec(resolved, rejected, "NXdriveMediaSync", "disableSync", [email]);
+        exec(resolved, rejected, "NXdriveMediaSync", "disableSync", [email, db]);
     });
 };
 
+MediaSyncManager.query = function (email, db) {
+    return new Promise(function(resolved, rejected) {
+        exec(resolved, rejected, "NXdriveMediaSync", "isSyncOn", [email, db]);
+    });
+};
 
 module.exports = MediaSyncManager;

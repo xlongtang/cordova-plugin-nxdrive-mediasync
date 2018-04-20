@@ -1,6 +1,6 @@
 {
     "name": "cordova-plugin-nxdrive-mediasync",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Enable or disable media sync for NXdrive accounts.",
     "cordova": {
         "id": "cordova-plugin-nxdrive-mediasync",
