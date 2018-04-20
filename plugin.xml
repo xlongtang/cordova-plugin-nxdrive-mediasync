@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+Copyright (c) Infobeyond Technologies, Inc.  All Rights Reserved.
+Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+-->
+<plugin id="cordova-plugin-nxdrive-mediasync" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>Media Sync Manager for NXdrive Accounts</name>
+  <description>Enable or disable media sync for NXdrive accounts.</description>
+
+  <license>Apache 2.0</license>
+  <keywords>nxdrive mediasync syncadapter</keywords>
+  <repo></repo>
+  <issue></issue>
+
+  <engines>
+    <!-- Required gradle functionality support -->
+    <engine name="cordova-android" version=">=4.1.0" />
+    <!-- Cordova 5.4.0 and Windows 4.1.0 are required for framework.target-dir support -->
+    <engine name="cordova" version=">=5.4.0" />
+  </engines>
+
+  <js-module name="MediaSyncManager" src="www/MediaSyncManager.js">
+    <clobbers target="NXdrive.MediaSyncManager" />
+  </js-module>
+
+  <platform name="android">
+    <info>
+    </info>
+    
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="NXdriveMediaSync">
+        <param name="android-package" value="com.nxdrive.photosync.AccountManagerPlugin"/>
+      </feature>
+    </config-file>
+
+  </platform>
+</plugin>

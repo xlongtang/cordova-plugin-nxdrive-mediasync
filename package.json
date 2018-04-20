@@ -1,0 +1,37 @@
+{
+    "name": "cordova-plugin-nxdrive-mediasync",
+    "version": "0.1.0",
+    "description": "Enable or disable media sync for NXdrive accounts.",
+    "cordova": {
+        "id": "cordova-plugin-nxdrive-mediasync",
+        "platforms": [
+            "android"
+        ]
+    },
+    "engines": {
+        "cordovaDependencies": {
+            "0.1.0": {
+                "cordova-android": ">=4.1.0",
+                "cordova-windows": ">=4.1.0",
+                "cordova": ">=5.4.0"
+            }
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xlongtang/cordova-plugin-nxdrive-mediasync.git"
+    },
+    "keywords": [
+        "mediasync",
+        "ecosystem:cordova",
+        "cordova-android",
+        "cordova-ios",
+        "cordova-windows"
+    ],
+    "author": "Xiaolong Tang",
+    "license": "Apache 2.0",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "https://www.nxdrive.com"
+}
